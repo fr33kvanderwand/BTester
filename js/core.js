@@ -46,10 +46,12 @@ window.log=function(){  "use strict"; window.log.history=window.log.history||[];
 			log("getData clicked");
 			getData();
 		});
-		$('#refresh').on('click',function() {
-			log("refresh clicked");
-			var buffer = $('.result table tr:first-child').html();
+		$('#reload').on('click',function() {
+			log("reload clicked");
+			var buffer = $('.result table tr:first-child');
+			log($('.result table tr:first-child'));
 			$('.result').slideUp('slow', function() {
+				log("slied up finihed");
 				$('.result table').html('').append(buffer);
 				getData();
 			});
@@ -130,16 +132,17 @@ window.log=function(){  "use strict"; window.log.history=window.log.history||[];
 							"<td>"+entry[7]+"</td>"+
 							"<td>"+entry[14]+"</td>"+
 							"<td>"+entry[15]+"</td>"+
-							"<td>"+entry[8]+"</td>"+
-							"<td>"+entry[9]+"</td>"+
+							// "<td>"+entry[8]+"</td>"+
+							// "<td>"+entry[9]+"</td>"+
 							"<td>"+entry[1]+"</td>"+
-							"<td>"+entry[3]+"</td>"+
-							"<td>"+entry[11]+"</td>"+
+							// "<td>"+entry[3]+"</td>"+
+							// "<td>"+entry[11]+"</td>"+
 						"</tr>"
 						);
-					$('.result').delay(250).slideDown('slow');
-					$('#getdata').off('click').addClass('disabled');
 				}
+				$('.result').delay(250).slideDown('slow');
+				$('#getdata').off('click').addClass('disabled');
+				log("getDatad finished");
 			}
 		});
 	}
