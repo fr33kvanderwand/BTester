@@ -42,3 +42,16 @@ label {
 	background-color: #FFFFFF;
 	border-color: #c4c4c4;
 }
+
+.result {
+	margin-top: 23px;
+	display: none;
+}
+
+.result table th {
+	background-color: #c4c4c4;
+	border-bottom: 1px solid #000000;
+}
+.result table tr:nth-child(odd) {
+	background-color: #c4c4c4;
+}

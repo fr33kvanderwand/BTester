@@ -5,6 +5,7 @@
 	description: default startpage
 	version history:
 	2013-06-04	basic setup
+	2013-06-06	added result (section & button)
 -->
 	<head>
 		<meta charset="utf-8">
@@ -47,6 +48,14 @@
 				<label>Resolution:</label>
 				<span></span>
 			</div>
+			<div class="pixelratio">
+				<label>Device Pixel Ratio:</label>
+				<span></span>
+			</div>
+			<div class="pixeldepth">
+				<label>Pixel Depth:</label>
+				<span></span>
+			</div>
 			<div class="battery">
 				<label>Battery Info:</label>
 				<span></span>
@@ -59,13 +68,60 @@
 				<label>Hardware:</label>
 				<input type="text" name="hw" />
 			</div>
+			<div class="browser">
+				<label>Browser:</label>
+				<select>
+					<option value="not specified"></option>
+					<option value="android">Android Browser</option>
+					<option value="chrome">Chrome</option>
+					<option value="firefox">Firefox</option>
+					<option value="ie">Internet Explorer</option>
+					<option value="opera">Opera</option>
+					<option value="safari">Safari</option>
+				</select>
+			</div>
+			<div class="orientation">
+				<label>Orientation:</label>
+				<select>
+					<option>portrait</option>
+					<option>landscape</option>
+				</select>
+			</div>
 			<div class="charging">
 				<label>Is your Device charging?</label>
-				<input type="checkbox" name="charging" value="true">
+				<input type="checkbox" name="charging" value="1">
 			</div>
 		</section>
 		<div class="btn" id="submit">
 			<span>submit</span>
 		</div>
+		<div class="btn" id="getdata">
+			<span>results</span>
+		</div>
+		<div class="btn" id="refresh">
+			<span>refresh</span>
+		</div>
+		<section class="result">
+			<table>
+				<tr>
+					<th>ID</th>
+					<th>hardware</th>
+					<th>browser</th>
+					<th>orientation</th>
+					<th>User Agent</th>
+					<th>inner resolution</th>
+					<th>outer resolution</th>
+					<th>available resolution</th>
+					<th>screen resolution</th>
+					<th>pixel ratio</th>
+					<th>pixel depth</th>
+					<th>battery</th>
+					<th>connection</th>
+					<th>time</th>
+					<th>viewport</th>
+					<th>charging</th>
+				</tr>
+			</table>
+		</section>
 	</body>
 </html>
