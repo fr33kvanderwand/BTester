@@ -28,10 +28,6 @@
 				<label>User Agent:</label>
 				<span></span>
 			</div>
-			<div class="viewport">
-				<label>Viewport:</label>
-				<span></span>
-			</div>
 			<div class="innerresolution">
 				<label>Inner Resolution:</label>
 				<span></span>
@@ -44,8 +40,8 @@
 				<label>Available Resolution:</label>
 				<span></span>
 			</div>
-			<div class="resolution">
-				<label>Resolution:</label>
+			<div class="screenresolution">
+				<label>Screen Resolution:</label>
 				<span></span>
 			</div>
 			<div class="pixelratio">
@@ -56,17 +52,23 @@
 				<label>Pixel Depth:</label>
 				<span></span>
 			</div>
-			<div class="battery">
-				<label>Battery Info:</label>
+			<div class="colordepth">
+				<label>Color Depth:</label>
 				<span></span>
 			</div>
-			<div class="connection">
-				<label>Connection Info:</label>
-				<span></span>
+			<div class="manufacturer">
+				<label>Manufacturer:</label>
+				<select>
+					<option value="default"></option>
+					<option value="samsung">Samsung</option>
+					<option value="htc">HTC</option>
+					<option value="apple">Apple</option>
+					<option value="nokia">Nokia</option>
+				</select>
 			</div>
-			<div class="hardware">
-				<label>Hardware:</label>
-				<input type="text" name="hw" />
+			<div class="model">
+				<label>Model:</label>
+				<input type="text" name="model" />
 			</div>
 			<div class="browser">
 				<label>Browser:</label>
@@ -83,17 +85,16 @@
 			<div class="orientation">
 				<label>Orientation:</label>
 				<select>
-					<option>portrait</option>
-					<option>landscape</option>
+					<option value="0">portrait</option>
+					<option value="1">landscape</option>
 				</select>
-			</div>
-			<div class="charging">
-				<label>Is your Device charging?</label>
-				<input type="checkbox" name="charging" value="1">
 			</div>
 		</section>
 		<div class="btn" id="submit">
 			<span>submit</span>
+		</div>
+		<div class="btn" id="refresh">
+			<span>refresh</span>
 		</div>
 		<div class="btn" id="getdata">
 			<span>results</span>
@@ -103,24 +104,25 @@
 		</div>
 		<section class="result">
 			<table>
-				<tr>
-					<th>ID</th>
-					<th>hardware</th>
-					<th>browser</th>
-					<th>orientation</th>
-					<th>User Agent</th>
-					<th>inner resolution</th>
-					<th>outer resolution</th>
-					<th>available resolution</th>
-					<th>screen resolution</th>
-					<th>pixel ratio</th>
-					<th>pixel depth</th>
-					<!-- <th>battery</th> -->
-					<!-- <th>connection</th> -->
-					<th>time</th>
-					<!-- <th>viewport</th> -->
-					<!-- <th>charging</th> -->
-				</tr>
+				<thead>
+					<tr>
+						<th rel='manufacturer'>Manufacturer</th>
+						<th rel='model'>Model</th>
+						<th rel='ua'>User Agent</th>
+						<th rel='browser'>Browser</th>
+						<th rel='o'>Orientation</th>
+						<th rel='ratio'>Pixel Ratio</th>
+						<th>Pixel Depth</th>
+						<th>Color Depth</th>
+						<th>Inner Resolution</th>
+						<th>Outer Resolution</th>
+						<th>Available Resolution</th>
+						<th>Screen Resolution</th>
+						<th rel='time'>Time</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
 			</table>
 		</section>
 	</body>

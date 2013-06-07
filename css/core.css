@@ -55,3 +55,12 @@ label {
 .result table tr:nth-child(odd) {
 	background-color: #c4c4c4;
 }
+
+.clickable {
+	cursor: pointer;
+}
+
+input,
+select {
+	width: 150px;
+}
